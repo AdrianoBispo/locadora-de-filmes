@@ -16,7 +16,7 @@ namespace Locadora_Platzi {
 
     class Program { 
         public static Filme[] filmes = new Filme[3];
-
+        public static Cliente[] clientes = new Cliente[2];
         static void Main(string[] args) {
             
             filmes[0] = new Filme();
@@ -33,10 +33,22 @@ namespace Locadora_Platzi {
             filmes[2] = new Filme();
             filmes[2].nome = "Matrix Revolutions";
             
+            clientes[0] = new Cliente();
+            clientes[0].nome = "Ruhan";
+            clientes[0].filmeAlugado = filmes[0];
+
+            clientes[1] = new Cliente();
+            clientes[1].nome = "Paulo";
+            clientes[1].filmeAlugado = filmes[1];
 
             while (true) {
                 
             Console.Clear();
+
+            Console.WriteLine(clientes[0].nome + ", seja bem-vindo à locadora de filmes Platzi.");
+            Console.WriteLine("\n");
+            Console.WriteLine("O seu filme alugado é: " + clientes[0].filmeAlugado.nome);            
+
             Console.WriteLine ("Seja Bem-Vindo à locadora Platzi!");
             Console.WriteLine("\n");
             Console.WriteLine ("Escolha uma opção:");
@@ -59,7 +71,7 @@ namespace Locadora_Platzi {
                     Console.Clear();
                     Console.WriteLine("Listar todos os filmes");
                     Console.WriteLine("\n");
-                    
+
                     for (int i = 0; i < filmes.Length; i++) {
 
                         Console.WriteLine(filmes[i].nome);
