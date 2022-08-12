@@ -25,9 +25,34 @@ namespace Locadora_Platzi {
             unicoFilme.avaliacao = 9.5f;
             unicoFilme.quantidade = 5;
             unicoFilme.lancamento = false;
-
+            while (true) {
+                
+            Console.Clear();
             Console.WriteLine ("Seja Bem-Vindo à locadora Platzi!");
-            Console.WriteLine ("Por enquanto, este é o nosso único filme:");
+            Console.WriteLine ("Escolha uma opção:");
+            Console.WriteLine ("1 - Listar todos os filmes");
+            Console.WriteLine ("0 - Sair");
+            Console.WriteLine ("\n");
+
+
+            int escolha = 0;
+            Int32.TryParse(Console.ReadLine(), out escolha);
+            switch (escolha) {
+
+                case 0:
+                    Console.Clear();
+                    Console.WriteLine("Obrigado por nos visitar!");
+                    Console.ReadLine();
+                    Environment.Exit (0);
+                    break;
+                case 1:
+                    Console.Clear();
+                    Console.WriteLine("Listar todos os filmes.");
+                    Console.ReadLine ();
+                    break;
+
+            }
+            }
             
             Console.WriteLine("Nome: " + unicoFilme.nome);
             Console.WriteLine("Ano de Lançamento: " + unicoFilme.anoLancamento);
