@@ -30,20 +30,13 @@ namespace Locadora_Platzi {
         static void Main(string[] args) {
 
             InicializarFilmes();
-            InicializarClientes(); 
-            
-            filmes[0] = new Filme("Matrix", 1999, "Ação", 9.5f, 5, false);
-            filmes[1] = new Filme("Matrix Reloaded", 2003, "Ação", 8f, 10, false);
-            filmes[2] = new Filme("Matrix Revolutions", 2003, "Ação", 6f, 20, false);
-            
-            clientes[0] = new Cliente("Ruhan", filmes[0]);
-            clientes[1] = new Cliente("Paulo", filmes[1]);
+            InicializarClientes();
 
             while (true) {
                 
             Console.Clear();
 
-            Console.WriteLine(clientes[1].nome + ", seja bem-vindo à locadora de filmes Platzi.");
+            Console.WriteLine(clientes[1].Nome + ", seja bem-vindo à locadora de filmes Platzi.");
             Console.WriteLine("\n");
             Console.WriteLine("O seu filme alugado é: " + clientes[1].filmeAlugado.nome);            
 
@@ -81,8 +74,8 @@ namespace Locadora_Platzi {
         }
 
         private static void InicializarClientes () {
-            clientes[0] = new Cliente("Ruhan", filmes[0]);
-            clientes[1] = new Cliente("Paulo", filmes[1]);
+            clientes[0] = new Cliente("Ruhan", "ruhan", "123");
+            clientes[1] = new Cliente("Paulo", "paulo", "456");
         }
 
         private static void ListarFilmes () {
