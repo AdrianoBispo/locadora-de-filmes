@@ -1,0 +1,15 @@
+C:\Users\lexcv\GitHub\curso_C#\bin\Debug\net6.0\curso_C#.exe
+C:\Users\lexcv\GitHub\curso_C#\bin\Debug\net6.0\curso_C#.deps.json
+C:\Users\lexcv\GitHub\curso_C#\bin\Debug\net6.0\curso_C#.runtimeconfig.json
+C:\Users\lexcv\GitHub\curso_C#\bin\Debug\net6.0\curso_C#.dll
+C:\Users\lexcv\GitHub\curso_C#\bin\Debug\net6.0\curso_C#.pdb
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.csproj.AssemblyReference.cache
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.AssemblyInfoInputs.cache
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.AssemblyInfo.cs
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.csproj.CoreCompileInputs.cache
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.dll
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\refint\curso_C#.dll
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.pdb
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\curso_C#.genruntimeconfig.cache
+C:\Users\lexcv\GitHub\curso_C#\obj\Debug\net6.0\ref\curso_C#.dll
