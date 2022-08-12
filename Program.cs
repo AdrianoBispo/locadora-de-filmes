@@ -12,6 +12,16 @@ namespace Locadora_Platzi {
         public float avaliacao;
         public int quantidade;
         public bool lancamento;
+
+        public Filme(string nome, int anoLancamento, string genero, 
+                    float avaliacao, int quantidade, bool lancamento) {
+            this.nome = nome;
+            this.anoLancamento = anoLancamento;
+            this.genero = genero;
+            this.avaliacao = avaliacao;
+            this.quantidade = quantidade;
+            this.lancamento = lancamento;
+        }
     }
 
     class Program { 
@@ -19,35 +29,20 @@ namespace Locadora_Platzi {
         public static Cliente[] clientes = new Cliente[2];
         static void Main(string[] args) {
             
-            filmes[0] = new Filme();
-            filmes[0].nome = "Matrix";
-            filmes[0].anoLancamento = 1999;
-            filmes[0].genero = "Ação";
-            filmes[0].avaliacao = 9.5f;
-            filmes[0].quantidade = 5;
-            filmes[0].lancamento = false;
-
-            filmes[1] = new Filme();
-            filmes[1].nome = "Matrix Reloaded";
-
-            filmes[2] = new Filme();
-            filmes[2].nome = "Matrix Revolutions";
+            filmes[0] = new Filme("Matrix", 1999, "Ação", 9.5f, 5, false);
+            filmes[1] = new Filme("Matrix Reloaded", 2003, "Ação", 8f, 10, false);
+            filmes[2] = new Filme("Matrix Revolutions", 2003, "Ação", 6f, 20, false);
             
-            clientes[0] = new Cliente();
-            clientes[0].nome = "Ruhan";
-            clientes[0].filmeAlugado = filmes[0];
-
-            clientes[1] = new Cliente();
-            clientes[1].nome = "Paulo";
-            clientes[1].filmeAlugado = filmes[1];
+            clientes[0] = new Cliente("Ruhan", filmes[0]);
+            clientes[1] = new Cliente("Paulo", filmes[1]);
 
             while (true) {
                 
             Console.Clear();
 
-            Console.WriteLine(clientes[0].nome + ", seja bem-vindo à locadora de filmes Platzi.");
+            Console.WriteLine(clientes[1].nome + ", seja bem-vindo à locadora de filmes Platzi.");
             Console.WriteLine("\n");
-            Console.WriteLine("O seu filme alugado é: " + clientes[0].filmeAlugado.nome);            
+            Console.WriteLine("O seu filme alugado é: " + clientes[1].filmeAlugado.nome);            
 
             Console.WriteLine ("Seja Bem-Vindo à locadora Platzi!");
             Console.WriteLine("\n");
