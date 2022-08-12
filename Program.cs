@@ -15,20 +15,30 @@ namespace Locadora_Platzi {
     }
 
     class Program { 
-        public static Filme unicoFilme;
+        public static Filme[] filmes = new Filme[3];
 
         static void Main(string[] args) {
-            unicoFilme = new Filme();
-            unicoFilme.nome = "Matrix";
-            unicoFilme.anoLancamento = 1999;
-            unicoFilme.genero = "Ação";
-            unicoFilme.avaliacao = 9.5f;
-            unicoFilme.quantidade = 5;
-            unicoFilme.lancamento = false;
+            
+            filmes[0] = new Filme();
+            filmes[0].nome = "Matrix";
+            filmes[0].anoLancamento = 1999;
+            filmes[0].genero = "Ação";
+            filmes[0].avaliacao = 9.5f;
+            filmes[0].quantidade = 5;
+            filmes[0].lancamento = false;
+
+            filmes[1] = new Filme();
+            filmes[1].nome = "Matrix Reloaded";
+
+            filmes[2] = new Filme();
+            filmes[2].nome = "Matrix Revolutions";
+            
+
             while (true) {
                 
             Console.Clear();
             Console.WriteLine ("Seja Bem-Vindo à locadora Platzi!");
+            Console.WriteLine("\n");
             Console.WriteLine ("Escolha uma opção:");
             Console.WriteLine ("1 - Listar todos os filmes");
             Console.WriteLine ("0 - Sair");
@@ -47,47 +57,22 @@ namespace Locadora_Platzi {
                     break;
                 case 1:
                     Console.Clear();
-                    Console.WriteLine("Listar todos os filmes.");
+                    Console.WriteLine("Listar todos os filmes");
+                    Console.WriteLine("\n");
+                    
+                    for (int i = 0; i < filmes.Length; i++) {
+
+                        Console.WriteLine(filmes[i].nome);
+
+                    }
+                    
                     Console.ReadLine ();
                     break;
 
             }
             }
-            
-            Console.WriteLine("Nome: " + unicoFilme.nome);
-            Console.WriteLine("Ano de Lançamento: " + unicoFilme.anoLancamento);
-            Console.WriteLine("Gênero: " + unicoFilme.genero);
-            Console.WriteLine("Avaliação: " + unicoFilme.avaliacao);
-            Console.WriteLine("Quantidade: " + unicoFilme.quantidade);
-            Console.WriteLine("Lançamento: " + unicoFilme.lancamento);
-            
-            Console.WriteLine("\n");
 
-            if (unicoFilme.lancamento) {
-                Console.WriteLine("O filme é um lançamento.");
-            }
 
-            else {
-                Console.WriteLine("O filme não é um lançamento.");
-            }
-
-            if (unicoFilme.avaliacao < 7 && unicoFilme.avaliacao >= 4) {
-                Console.WriteLine("O filme não é tão bom.");
-            }
-
-            if (unicoFilme.avaliacao < 4) {
-                Console.WriteLine("O filme é ruim!");
-            }
-
-            else if (unicoFilme.avaliacao >= 7 && unicoFilme.avaliacao < 9) {
-                Console.WriteLine("O filme é bom!");
-            }
-
-            else {
-                Console.WriteLine("O filme é fantástico");
-            }
-
-            Console.ReadLine();
             
         }
     }
