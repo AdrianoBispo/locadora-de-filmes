@@ -28,6 +28,9 @@ namespace Locadora_Platzi {
         public static Filme[] filmes = new Filme[3];
         public static Cliente[] clientes = new Cliente[2];
         static void Main(string[] args) {
+
+            InicializarFilmes();
+            InicializarClientes(); 
             
             filmes[0] = new Filme("Matrix", 1999, "Ação", 9.5f, 5, false);
             filmes[1] = new Filme("Matrix Reloaded", 2003, "Ação", 8f, 10, false);
@@ -63,24 +66,45 @@ namespace Locadora_Platzi {
                     Environment.Exit (0);
                     break;
                 case 1:
-                    Console.Clear();
-                    Console.WriteLine("Listar todos os filmes");
-                    Console.WriteLine("\n");
-
-                    for (int i = 0; i < filmes.Length; i++) {
-
-                        Console.WriteLine(filmes[i].nome);
-
-                    }
-                    
-                    Console.ReadLine ();
+                    ListarFilmes();
                     break;
 
+                }
             }
-            }
-
-
-            
         }
+
+        private static void InicializarFilmes () {
+            filmes[0] = new Filme("Matrix", 1999, "Ação", 9.5f, 5, false);
+            filmes[1] = new Filme("Matrix Reloaded", 2003, "Ação", 8f, 10, false);
+            filmes[2] = new Filme("Matrix Revolutiuons", 2003, "Ação", 6f, 20, false);
+
+        }
+
+        private static void InicializarClientes () {
+            clientes[0] = new Cliente("Ruhan", filmes[0]);
+            clientes[1] = new Cliente("Paulo", filmes[1]);
+        }
+
+        private static void ListarFilmes () {
+            Console.Clear();
+            Console.WriteLine("Listar todos os filmes");
+            Console.WriteLine("\n");
+
+            for (int i = 0; i < filmes.Length; i++) {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Nome: " + filmes[i].nome);
+                Console.WriteLine("Ano de lançamento: " + filmes[i].anoLancamento);
+                Console.WriteLine("Gênero: " + filmes[i].genero);
+                Console.WriteLine("Avaliação: " + filmes[i].avaliacao);
+                Console.WriteLine("Quantidade: " + filmes[i].quantidade);
+                Console.WriteLine("É lançamento: " + filmes[i].lancamento);
+                Console.WriteLine("----------------------");
+
+            }
+
+            Console.ReadLine();
+
+        }   
+
     }
 }
