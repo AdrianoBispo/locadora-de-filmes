@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Locadora_Platzi {
-    class Cliente {
+namespace Locadora_Platzi
+{
+    public class Usuario
+    {
         protected string nome;
         public string Nome { get { return nome; } }
 
@@ -13,15 +15,5 @@ namespace Locadora_Platzi {
 
         protected string senha;
         public string Senha { get { return senha; } }
-
-        public Filme filmeAlugado;
-
-        public Cliente(string nome, string login, string senha)
-        {
-            this.nome = nome;
-            this.login = login;
-            this.senha = senha;
-        }
-
     }
 }
