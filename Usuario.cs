@@ -15,5 +15,12 @@ namespace Locadora_Platzi
 
         protected string senha;
         public string Senha { get { return senha; } }
+
+        public Usuario(string nome, string login, string senha)
+        {
+            this.nome = nome;
+            this.login = login;
+            this.senha = senha;
+        }
     }
 }
