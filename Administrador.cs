@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace curso_C_
+namespace Locadora_Platzi
 {
-    public class Administrador
+    public class Administrador : Usuario
     {
-        
+        public Administrador(string nome, string login, string senha) : base(nome, login, senha)
+        {
+        }
     }
 }

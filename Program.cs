@@ -34,14 +34,16 @@ namespace Locadora_Platzi
     class Program
     { 
         public static List<Filme> filmes = new List<Filme>();
+
         public static List<Cliente> clientes = new List<Cliente>();
+        public static List<Administrador> administradores = new List<Administrador>();
     
         static void Main(string[] args)
     
         {
 
             InicializarFilmes();
-            InicializarClientes();
+            InicializarUsuarios();
 
             while (true)
             {    
@@ -94,10 +96,12 @@ namespace Locadora_Platzi
             filmes.Add(new Filme("Matrix Revolutiuons", 2003, Genero.Acao, 6f, 20, false));
             filmes.Add(new Filme("Ghost", 1990, Genero.Romance, 10f, 2, false));
         }
-        private static void InicializarClientes ()
+        private static void InicializarUsuarios ()
         {
             clientes.Add(new Cliente("Ruhan", "ruhan", "123"));
             clientes.Add(new Cliente("Paulo", "paulo", "456"));
+
+            administradores.Add(new Administrador("Elda", "elda", "789"));
         }   
     }
 }
