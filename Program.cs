@@ -35,8 +35,11 @@ namespace Locadora_Platzi
     { 
         public static List<Filme> filmes = new List<Filme>();
 
+        public static List<Usuario> usuarios = new List<Usuario>();
         public static List<Cliente> clientes = new List<Cliente>();
         public static List<Administrador> administradores = new List<Administrador>();
+
+        public static Usuario usuarioLogado;
     
         static void Main(string[] args)
     
@@ -45,48 +48,21 @@ namespace Locadora_Platzi
             InicializarFilmes();
             InicializarUsuarios();
 
-            while (true)
-            {    
-                Console.Clear();
+            Console.WriteLine("Login: ");
+            string login = Console.ReadLine();
 
-                Console.WriteLine(clientes[0].Nome + ", seja bem-vindo à locadora de filmes Platzi.");
-                if (clientes[0].filmeAlugado != null)
-                Console.WriteLine("\n");
-                    Console.WriteLine("O seu filme alugado é: " + clientes[0].filmeAlugado.nome);            
+            Console.WriteLine("Senha: ");
+            string senha = Console.ReadLine();
 
-                Console.WriteLine ("Seja Bem-Vindo à locadora Platzi!");
-                Console.WriteLine("\n");
-                Console.WriteLine ("Escolha uma opção:");
-                Console.WriteLine ("1 - Listar todos os filmes");
-                Console.WriteLine ("0 - Sair");
-                Console.WriteLine ("\n");
-
-
-                int escolha = 0;
-                Int32.TryParse(Console.ReadLine(), out escolha);
-
-                switch (escolha)
+            for (int i = 0; i < usuarios.Count; i++)
+            {
+                if (usuarios[i].Login == login && usuarios[i].Senha == senha)
                 {
-                    case 0:
-                        Console.Clear();
-                        Console.WriteLine("Obrigado por nos visitar!");
-                        Console.ReadLine();
-                        Environment.Exit (0);
-                        break;
-
-                    case 1:
-                        Locadora_Platzi.FuncionalidadesCliente.ListarFilmes();
-                        break;
-
-                    case 2:
-                        Locadora_Platzi.FuncionalidadesCliente.ListarPorGenero();
-                        break;
-
-                    case 3:
-                        Locadora_Platzi.FuncionalidadesCliente.AlugarFilmes();
-                        break;
-                }
+                    usuarioLogado = usuarios[i];
+                } 
             }
+
+            usuarioLogado.ExibirTela();
         }
 
         private static void InicializarFilmes ()
@@ -102,6 +78,16 @@ namespace Locadora_Platzi
             clientes.Add(new Cliente("Paulo", "paulo", "456"));
 
             administradores.Add(new Administrador("Elda", "elda", "789"));
+
+            for (int i = 0; i < clientes.Count; i++)
+            {
+                usuarios.Add(clientes[i]);
+            }
+
+            for (int i = 0; i < administradores.Count; i++)
+            {
+                usuarios.Add(administradores[i]);
+            }
         }   
     }
 }

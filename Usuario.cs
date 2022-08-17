@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Locadora_Platzi
@@ -21,6 +22,11 @@ namespace Locadora_Platzi
             this.nome = nome;
             this.login = login;
             this.senha = senha;
+        }
+        
+        public virtual void ExibirTela()
+        {
+            
         }
     }
 }
