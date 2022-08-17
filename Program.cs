@@ -42,27 +42,31 @@ namespace Locadora_Platzi
         public static Usuario usuarioLogado;
     
         static void Main(string[] args)
-    
         {
-
             InicializarFilmes();
             InicializarUsuarios();
 
-            Console.WriteLine("Login: ");
-            string login = Console.ReadLine();
-
-            Console.WriteLine("Senha: ");
-            string senha = Console.ReadLine();
-
-            for (int i = 0; i < usuarios.Count; i++)
+            while (true)
             {
-                if (usuarios[i].Login == login && usuarios[i].Senha == senha)
-                {
-                    usuarioLogado = usuarios[i];
-                } 
-            }
+                usuarioLogado = null;
+                Console.Clear();
 
-            usuarioLogado.ExibirTela();
+                Console.WriteLine("Login: ");
+                string login = Console.ReadLine();
+
+                Console.WriteLine("Senha: ");
+                string senha = Console.ReadLine();
+
+                for (int i = 0; i < usuarios.Count; i++)
+                {
+                    if (usuarios[i].Login == login && usuarios[i].Senha == senha)
+                    {
+                        usuarioLogado = usuarios[i];
+                    } 
+                }
+                usuarioLogado.ExibirTela();
+            }
+            
         }
 
         private static void InicializarFilmes ()
